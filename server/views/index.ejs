@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>湖工大在线报名系统</title>
+  <meta name="description" content="欢迎你的加入">
+  <link rel="stylesheet" href="https://cdn.shinonome.cn/reg.hgdonline.org/font-awesome-4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdn.shinonome.cn/reg.hgdonline.org/bulma-0.5.2/css/bulma.css">
+</head>
+
+<body>
+  <section class="hero is-primary">
+    <div class="hero-body">
+      <div class="container">
+        <div class="columns is-vcentered">
+          <div class="column">
+            <p class="title">
+              湖工大在线报名系统
+            </p>
+            <br />
+            <p class="subtitle">
+              欢迎你的加入
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+  <section class="section is-medium">
+    <div class="container">
+      <div class="tile is-ancestor">
+        <div class="tile is-vertical is-6">
+          <div class="card">
+            <div class="tile is-parent">
+              <article class="tile is-child is-primary">
+                <div id="addUser">
+                  <div class="field">
+                    <label class="label">姓名</label>
+                    <p class="control">
+                      <input id="inputUserName" class="input is-primary" type="text">
+                    </p>
+                  </div>
+                  <div class="field">
+                    <label class="label">手机号</label>
+                    <p class="control">
+                      <input id="inputPhoneNumber" class="input is-primary" type="number">
+                    </p>
+                  </div>
+                  <div class="field">
+                    <label class="label">QQ号</label>
+                    <p class="control">
+                      <input id="inputQQNumber" class="input is-primary" type="number">
+                    </p>
+                  </div>
+                  <div class="field">
+                    <label class="label">电子邮箱</label>
+                    <p class="control">
+                      <input id="inputUserEmail" class="input is-primary" type="email">
+                    </p>
+                  </div>
+                  <div class="field">
+                    <label class="label">学号</label>
+                    <p class="control">
+                      <input id="inputStudentNumber" class="input is-primary" type="number">
+                    </p>
+                  </div>
+                  <div class="field">
+                    <label class="label">所在学院</label>
+                    <div class="control">
+                      <div class="select is-primary">
+                        <select id="classselect">
+                                <option value="机械工程学院">机械工程学院</option>
+                                <option value="电气与电子工程学院">电气与电子工程学院</option>
+                                <option value="材料与化学工程学院">材料与化学工程学院</option>
+                                <option value="生物工程与食品学院">生物工程与食品学院</option>
+                                <option value="土木建筑与环境学院">土木建筑与环境学院</option>
+                                <option value="计算机学院">计算机学院</option>
+                                <option value="工业设计学院">工业设计学院</option>
+                                <option value="艺术设计学院">艺术设计学院</option>
+                                <option value="经济与管理学院">经济与管理学院</option>
+                                <option value="外国语学院">外国语学院</option>
+                                <option value="理学院">理学院</option>
+                                <option value="职业技术师范学院">职业技术师范学院</option>
+                                <option value="工程技术学院">工程技术学院</option>
+                                <option value="继续教育学院">继续教育学院</option>
+                              </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="field">
+                    <div class="control">
+                      <label class="label">性别</label>
+                      <input type="radio" name="foobar" value="man"> 男
+                      </label>
+                      <label class="radio">
+                            <input type="radio" name="foobar" value="woman">
+                            女
+                            </label>
+                      <label class="radio">
+                                <input type="radio" name="foobar" value="secret">
+                                    秀吉
+                            </label>
+                    </div>
+                  </div>
+                  <div class="field">
+                    <label class="label">用几句简短的话介绍你自己</label>
+                    <p class="control">
+                      <textarea id="inputUserMaintext" class="textarea" placeholder="曾经做过些什么，自己的兴趣爱好，特长什么的都可以写"></textarea>
+                    </p>
+                  </div>
+                  <br />
+                  <div id="warninginfo"></div>
+                  <br />
+                  <div class="field is-grouped">
+                    <p class="control">
+                      <button id="btnAddUser" class="button is-primary">提交</button>
+                    </p>
+                  </div>
+
+
+
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="container">
+      <div class="content has-text-centered">
+        <br />
+        <h2>あい。</h2>
+        <p>
+          © 2017 湖工大在线
+        </p>
+
+      </div>
+    </div>
+  </footer>
+  <% if (env !== "production" ) { %>
+    <script src="/bundle.js"></script>
+    <% } else { %>
+      <%- jsfile %>
+        <% } %>
+</body>
+
+</html>
